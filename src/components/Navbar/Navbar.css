@@ -1,0 +1,29 @@
+.Navbar {
+    width: 100%;
+    background: #5529a4;
+}
+
+.Navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.Navbar li {
+    float: left;
+}
+
+.Navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.Navbar li a:hover {
+    background: #3f207e
+}
