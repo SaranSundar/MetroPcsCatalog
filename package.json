@@ -10,6 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build https://metropcs.surge.sh/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

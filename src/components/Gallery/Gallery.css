@@ -1,0 +1,73 @@
+.Gallery {
+    background: #d8d8d8;
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    grid-template-rows: repeat(2, 600px);
+    grid-gap: 20px;
+}
+
+.BrandName {
+    font-size: 20px;
+    font-weight: lighter;
+    width: 100%;
+}
+
+.PhoneName {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.CardBottomHalfContainer {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.ImageContainer {
+    object-fit: fill;
+    width: 90%;
+    height: 100%;
+}
+
+.ImageContainer img {
+    height: 100%;
+}
+
+.DivArt {
+    border-top: 70px solid #FFD321;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 1fr;
+}
+
+.DivArtText {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    color: #5529a4;
+}
+
+.DivArtContainer {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.Card {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.Card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
