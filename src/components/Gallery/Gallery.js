@@ -26,10 +26,22 @@ class Card extends Component {
                         <img src={samsung}/>
                     </div>
                     <div className="PhoneName">Galaxy S9</div>
+                    <StarRating/>
                 </div>
             </div>
         );
     }
 }
+
+export const StarRating = (props) => {
+    return (
+        <div style={{paddingTop: "10px", fontSize: "20px"}}>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star"></span>
+            <span className="fa fa-star"></span>
+        </div>);
+};
 
 export default Gallery;
