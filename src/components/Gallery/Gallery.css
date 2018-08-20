@@ -2,9 +2,16 @@
     background: #d8d8d8;
     display: grid;
     width: 90%;
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
-    grid-template-rows: repeat(2, 600px);
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    grid-template-rows: repeat(2, 750px);
     grid-gap: 20px;
+}
+
+.PriceContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
 .BrandName {
@@ -19,8 +26,9 @@
 
 .PhoneName {
     font-size: 30px;
-    font-weight: bold;
+    font-weight: bolder;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 .CardBottomHalfContainer {
@@ -36,6 +44,7 @@
     object-fit: fill;
     width: 90%;
     height: 100%;
+    margin-bottom: 10px;
 }
 
 .ImageContainer img {
@@ -43,9 +52,9 @@
 }
 
 .DivArt {
-    border-top: 70px solid #FFD321;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
+    border-top: 40px solid #FFD321;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
     height: 0;
     width: 1fr;
 }
@@ -53,17 +62,16 @@
 .DivArtText {
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 25%;
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 22px;
     color: #5529a4;
 }
 
 .DivArtContainer {
     position: relative;
-    margin-bottom: 15px;
 }
 
 .Card {

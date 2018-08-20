@@ -21,21 +21,51 @@ class Card extends Component {
                     <div className="DivArtText">$300 OFF</div>
                 </div>
                 <div className="CardBottomHalfContainer">
-                    <div className="BrandName">SAMSUNG</div>
+                    <StarRating/>
                     <div className="ImageContainer">
                         <img src={samsung}/>
                     </div>
+                    <div className="BrandName">SAMSUNG</div>
                     <div className="PhoneName">Galaxy S9</div>
-                    <StarRating/>
+                    <div className="PriceContainer">
+                        <PriceBoxesL/>
+                        <PriceBoxesM/>
+                        <PriceBoxesR/>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
+export const PriceBoxesL = (props) => {
+    return (
+        <div style={{borderRight: "2px solid #d8d8d8", padding: "7px", color: "gray"}}>
+            <span style={{fontSize: "15px", verticalAlign: "top"}}>$</span>
+            <span style={{fontSize: "35px"}}>85</span>
+            <span style={{fontSize: "15px", fontWeight: "bold", verticalAlign: "top"}}>99</span>
+        </div>);
+};
+export const PriceBoxesM = (props) => {
+    return (
+        <div style={{borderRight: "2px solid #d8d8d8", padding: "7px"}}>
+            <span style={{fontSize: "25px", verticalAlign: "top"}}>$</span>
+            <span style={{fontSize: "45px"}}>65</span>
+            <span style={{fontSize: "25px", fontWeight: "bold", verticalAlign: "top"}}>99</span>
+        </div>);
+};
+export const PriceBoxesR = (props) => {
+    return (
+        <div style={{padding: "7px", color: "gray"}}>
+            <span style={{fontSize: "15px", verticalAlign: "top"}}>$</span>
+            <span style={{fontSize: "35px"}}>95</span>
+            <span style={{fontSize: "15px", fontWeight: "bold", verticalAlign: "top"}}>99</span>
+        </div>);
+};
+
 export const StarRating = (props) => {
     return (
-        <div style={{paddingTop: "10px", fontSize: "20px"}}>
+        <div style={{paddingTop: "10px", fontSize: "20px", paddingBottom: "7px"}}>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
