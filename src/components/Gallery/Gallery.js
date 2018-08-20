@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import "./Gallery.css"
 import samsung from "./samsung.jpg"
+import lg from "./lg.jpg"
+import apple from "./apple.jpg"
 
 class Gallery extends Component {
     render() {
         return (
             <div className="Gallery">
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                <Card image={samsung} brand={"Samsung"} name={"Galaxy S9"}/>
+                <Card image={lg}/>
+                <Card image={apple}/>
+                <Card image={samsung}/>
+                <Card image={lg}/>
+                <Card image={apple}/>
             </div>
         );
     }
@@ -28,7 +30,7 @@ class Card extends Component {
                 <div className="CardBottomHalfContainer">
                     <StarRating/>
                     <div className="ImageContainer">
-                        <img src={samsung}/>
+                        <img src={this.props.image}/>
                     </div>
                     <div className="BrandName">SAMSUNG</div>
                     <div className="PhoneName">Galaxy S9</div>
