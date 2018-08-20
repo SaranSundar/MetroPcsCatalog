@@ -7,6 +7,11 @@ class Gallery extends Component {
         return (
             <div className="Gallery">
                 <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
             </div>
         );
     }
@@ -15,7 +20,7 @@ class Gallery extends Component {
 class Card extends Component {
     render() {
         return (
-            <div className="Card" style={{gridColumnStart: "2", gridRowStart: "1"}}>
+            <div className="Card">
                 <div className="DivArtContainer">
                     <div className="DivArt"/>
                     <div className="DivArtText">$300 OFF</div>
