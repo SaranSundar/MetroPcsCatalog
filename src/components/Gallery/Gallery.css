@@ -14,10 +14,36 @@
     align-items: center;
 }
 
+.InfoContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgba(45, 43, 135, 0.87);
+    height: 40px;
+    border-radius: 0 0 15px 15px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.InfoContainer h1 {
+    color: white;
+    font-size: .875rem;
+    font-weight: bold;
+}
+
 .BrandName {
     font-size: 20px;
     font-weight: lighter;
     width: 100%;
+}
+
+.LTE {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(45, 43, 135, 0.87);
+    width: 100%;
+    margin-top: 8px;
 }
 
 .checked {
@@ -28,7 +54,7 @@
     font-size: 30px;
     font-weight: bolder;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .CardBottomHalfContainer {
@@ -77,9 +103,11 @@
 .Card {
     background: #fff;
     border-radius: 0 0 15px 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    position: relative;
 }
 
 .Card:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
 }

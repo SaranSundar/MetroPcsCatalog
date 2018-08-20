@@ -3,17 +3,20 @@ import "./Gallery.css"
 import samsung from "./samsung.jpg"
 import lg from "./lg.jpg"
 import apple from "./apple.jpg"
+import motorola from "./motorola.jpg"
+import iphoneX from "./iphoneX.jpg"
+import zte from "./zte.jpg"
 
 class Gallery extends Component {
     render() {
         return (
             <div className="Gallery">
-                <Card image={samsung} brand={"Samsung"} name={"Galaxy S9"}/>
-                <Card image={lg}/>
-                <Card image={apple}/>
-                <Card image={samsung}/>
-                <Card image={lg}/>
-                <Card image={apple}/>
+                <Card image={samsung} brand={"Samsung"} name={"Galaxy S9"} display={"hidden"} discount={"$100 OFF"}/>
+                <Card image={lg} brand={"LG"} name={"Stylo 4"} display={"visible"} discount={"$300 OFF"}/>
+                <Card image={apple} brand={"Apple"} name={"iPhone 7"} display={"visible"} discount={"$200 OFF"}/>
+                <Card image={iphoneX} brand={"Apple"} name={"iPhone X"} display={"visible"} discount={"$100 OFF"}/>
+                <Card image={motorola} brand={"Motorola"} name={"Moto e5 Play"} display={"hidden"} discount={"$200 OFF"}/>
+                <Card image={zte} brand={"ZTE"} name={"Tempo X"} display={"visible"} discount={"$400 OFF"}/>
             </div>
         );
     }
@@ -23,21 +26,27 @@ class Card extends Component {
     render() {
         return (
             <div className="Card">
-                <div className="DivArtContainer">
+                <div className="DivArtContainer" style={{visibility: this.props.display}}>
                     <div className="DivArt"/>
-                    <div className="DivArtText">$300 OFF</div>
+                    <div className="DivArtText">{this.props.discount}</div>
                 </div>
                 <div className="CardBottomHalfContainer">
+                    <div className="LTE">4G LTE</div>
                     <StarRating/>
                     <div className="ImageContainer">
                         <img src={this.props.image}/>
                     </div>
-                    <div className="BrandName">SAMSUNG</div>
-                    <div className="PhoneName">Galaxy S9</div>
+                    <div className="BrandName">{this.props.brand}</div>
+                    <div className="PhoneName">{this.props.name}</div>
                     <div className="PriceContainer">
                         <PriceBoxesL/>
                         <PriceBoxesM/>
                         <PriceBoxesR/>
+                    </div>
+                    <div className="InfoContainer">
+                        <h1>
+                            Limited Time. Extra 20% off!
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -72,7 +81,7 @@ export const PriceBoxesR = (props) => {
 
 export const StarRating = (props) => {
     return (
-        <div style={{paddingTop: "10px", fontSize: "20px", paddingBottom: "7px"}}>
+        <div style={{paddingTop: "5px", fontSize: "20px", paddingBottom: "7px"}}>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
