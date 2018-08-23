@@ -15,7 +15,8 @@ class Gallery extends Component {
                 <Card image={lg} brand={"LG"} name={"Stylo 4"} display={"visible"} discount={"$300 OFF"}/>
                 <Card image={apple} brand={"Apple"} name={"iPhone 7"} display={"visible"} discount={"$200 OFF"}/>
                 <Card image={iphoneX} brand={"Apple"} name={"iPhone X"} display={"visible"} discount={"$100 OFF"}/>
-                <Card image={motorola} brand={"Motorola"} name={"Moto e5 Play"} display={"hidden"} discount={"$200 OFF"}/>
+                <Card image={motorola} brand={"Motorola"} name={"Moto e5 Play"} display={"hidden"}
+                      discount={"$200 OFF"}/>
                 <Card image={zte} brand={"ZTE"} name={"Tempo X"} display={"visible"} discount={"$400 OFF"}/>
             </div>
         );
@@ -39,9 +40,13 @@ class Card extends Component {
                     <div className="BrandName">{this.props.brand}</div>
                     <div className="PhoneName">{this.props.name}</div>
                     <div className="PriceContainer">
-                        <PriceBoxesL/>
-                        <PriceBoxesM/>
-                        <PriceBoxesR/>
+                        <PriceBoxes borderRight={"2px solid #d8d8d8"} padding={"7px"} color={"gray"} fontSizeLR={"15px"}
+                                    fontSizeM={"35px"} price={"85"} paddingR={"0"}/>
+                        <PriceBoxes borderRight={"2px solid #d8d8d8"} padding={"7px"} color={"black"}
+                                    fontSizeLR={"25px"}
+                                    fontSizeM={"45px"} price={"65"} paddingR={"10px"}/>
+                        <PriceBoxes borderRight={""} padding={"7px"} color={"gray"} fontSizeLR={"15px"}
+                                    fontSizeM={"35px"} price={"85"} paddingR={"0"}/>
                     </div>
                     <div className="InfoContainer">
                         <h1>
@@ -54,28 +59,17 @@ class Card extends Component {
     }
 }
 
-export const PriceBoxesL = (props) => {
+export const PriceBoxes = (props) => {
     return (
-        <div style={{borderRight: "2px solid #d8d8d8", padding: "7px", color: "gray"}}>
-            <span style={{fontSize: "15px", verticalAlign: "top"}}>$</span>
-            <span style={{fontSize: "35px"}}>85</span>
-            <span style={{fontSize: "15px", fontWeight: "bold", verticalAlign: "top"}}>99</span>
-        </div>);
-};
-export const PriceBoxesM = (props) => {
-    return (
-        <div style={{borderRight: "2px solid #d8d8d8", padding: "7px"}}>
-            <span style={{fontSize: "25px", verticalAlign: "top"}}>$</span>
-            <span style={{fontSize: "45px"}}>65</span>
-            <span style={{fontSize: "25px", fontWeight: "bold", verticalAlign: "top"}}>99</span>
-        </div>);
-};
-export const PriceBoxesR = (props) => {
-    return (
-        <div style={{padding: "7px", color: "gray"}}>
-            <span style={{fontSize: "15px", verticalAlign: "top"}}>$</span>
-            <span style={{fontSize: "35px"}}>95</span>
-            <span style={{fontSize: "15px", fontWeight: "bold", verticalAlign: "top"}}>99</span>
+        <div style={{borderRight: props.borderRight, padding: props.padding, color: props.color}}>
+            <span style={{fontSize: props.fontSizeLR, verticalAlign: "top"}}>$</span>
+            <span style={{fontSize: props.fontSizeM}}>{props.price}</span>
+            <span style={{
+                fontSize: props.fontSizeLR,
+                fontWeight: "bold",
+                verticalAlign: "top",
+                paddingRight: props.paddingR
+            }}>99</span>
         </div>);
 };
 
