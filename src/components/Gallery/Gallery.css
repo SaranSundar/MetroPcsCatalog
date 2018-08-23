@@ -33,17 +33,14 @@
 }
 
 .BrandName {
-    font-size: 20px;
     font-weight: lighter;
     width: 100%;
 }
 
 .LTE {
-    font-size: 20px;
     font-weight: bold;
     color: rgba(45, 43, 135, 0.87);
     width: 100%;
-    margin-top: 8px;
 }
 
 .checked {
@@ -51,7 +48,6 @@
 }
 
 .PhoneName {
-    font-size: 30px;
     font-weight: bolder;
     width: 100%;
     margin-bottom: 2px;
@@ -92,7 +88,6 @@
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 22px;
     color: #5529a4;
 }
 

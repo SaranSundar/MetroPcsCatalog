@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Responsive from 'react-responsive';
 import "./Gallery.css"
 import samsung from "./samsung.jpg"
 import lg from "./lg.jpg"
@@ -23,22 +24,37 @@ class Gallery extends Component {
     }
 }
 
+const Desktop = props => <Responsive {...props} minWidth={992}/>;
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991}/>;
+const Mobile = props => <Responsive {...props} maxWidth={767}/>;
+const Default = props => <Responsive {...props} minWidth={768}/>;
+
+const Example = () => (
+    <div>
+        <Desktop>Desktop or laptop</Desktop>
+        <Tablet>Tablet</Tablet>
+        <Mobile>Mobile</Mobile>
+        <Default>Not mobile (desktop or laptop or tablet)</Default>
+    </div>
+);
+
+//Make those properties as passed in props then render different values for each of the sizes above.
 class Card extends Component {
     render() {
         return (
             <div className="Card">
                 <div className="DivArtContainer" style={{visibility: this.props.display}}>
                     <div className="DivArt"/>
-                    <div className="DivArtText">{this.props.discount}</div>
+                    <div className="DivArtText" style={{fontSize: "22px"}}>{this.props.discount}</div>
                 </div>
                 <div className="CardBottomHalfContainer">
-                    <div className="LTE">4G LTE</div>
+                    <div className="LTE" style={{fontSize: "20px", marginTop: "8px"}}>4G LTE</div>
                     <StarRating/>
                     <div className="ImageContainer">
                         <img src={this.props.image}/>
                     </div>
-                    <div className="BrandName">{this.props.brand}</div>
-                    <div className="PhoneName">{this.props.name}</div>
+                    <div className="BrandName" style={{fontSize: "20px"}}>{this.props.brand}</div>
+                    <div className="PhoneName" style={{fontSize: "30px"}}>{this.props.name}</div>
                     <div className="PriceContainer">
                         <PriceBoxes borderRight={"2px solid #d8d8d8"} padding={"7px"} color={"gray"} fontSizeLR={"15px"}
                                     fontSizeM={"35px"} price={"85"} paddingR={"0"}/>
